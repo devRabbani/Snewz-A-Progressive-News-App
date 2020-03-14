@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Top News">
+  <meta name="keywords" content="HTML,CSS,Web News,Top,News">
+  <meta name="author" content="Golam Rabbani">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNewz</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+ <header>
+ <div class="wrapper">
+<div><h1 style="float: left;">SNEWZ</h1></div>
+   <ul>
+     <li style="padding-right: 25%;"><div class="search">
+      <input type="text" class="searchTerm" placeholder="Search for News!">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+   </div></li>
+     <li><a href="index.html">Home</a></li>
+     <li><a href="about.html">About</a></li>
+   </ul>  
+ </div>
+ </header>
+ <div class="wrapper">
+ <h1 class="hdrtag" style="margin-top: 13%;">Top Headlines</h1>
+ <hr>
+ <div style="display: none;" class="sort">
+   <select class="sortby">
+      <option value="publishedAt">PublishedAt</option>
+      <option value="relevancy">Relevancy</option>
+      <option value="popularity">Popularity</option>
+      
+    </select>
+ </div>
+ <select id="srcselect"></select>
+ <div class="main">
+ </div>
+ <div class="load" style="display: none;">
+   <button class="searchfor">Next</button>
+ </div>
+ <script src="js/index.js"></script> 
+ </div>
+</body>
+</html>
+

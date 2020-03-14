@@ -1,0 +1,169 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  position: relative;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  box-shadow: 0 4px 10px 2px #aaa4a4d9;
+  margin-bottom: 4%;
+  position: fixed;
+  z-index: 99999;
+  background-color: white;
+  top: 0;
+}
+
+.main {
+  text-align: center;
+  margin-top: 3%;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: max-content;
+  grid-auto-flow: row dense;
+}
+select{
+  padding: 0.6em 1em 0.6em 1em;
+}
+.article h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.article a,
+.article a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.article img {
+  width: 100%;
+}
+
+.article {
+  min-width: 300px;
+  border: 1px solid #d1d1d1;
+  padding: 3%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px 8px #c3c0c0b8;
+
+}
+.search {
+  position: relative;
+  display: flex;
+  width: 150%;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+.wrapper ul{
+  float: right;
+  list-style: none;
+  display: flex;
+  margin-top: 2.5%;
+  align-items: center;
+  width: auto;
+}
+
+.wrapper li a {
+  color: #00B4CC;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 120%;
+  padding: 0 20px;
+}
+ul a:hover,
+ul a:focus {
+  color: #e67e22;
+}
+
+.awrapper{
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 15%;
+  text-align: center;
+}
+
+.awrapper p{
+  line-height: 160%;
+  font-size: 115%;
+}
+.awrapper hr{
+  width: 40%;
+}
+.awrapper a{
+  text-decoration: none;
+  font-weight: 400;
+  color:#00B4CC;
+}
+.awrapper h3{
+  font-weight: 400;
+}
+
+a.contact{
+   margin:0 2%;
+  font-size: 120%;
+}
+
+li{
+  padding-right: 3%;
+}
+
+select{
+  box-shadow:2px 2px 6px #b8b3b3d1;
+  margin:1.6% 0 2% 1%;
+}
+.sortby{
+  width: 15%;
+}

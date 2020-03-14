@@ -4,12 +4,9 @@ const btn=document.querySelector('.searchButton');
 const headtag=document.querySelector('.hdrtag');
 const body=document.querySelector('body');
 const sortselector=document.querySelector('.sort');
-const load=document.querySelector('.load');
 const api="471a578390434f8cada92ab15e4e8812";
 const defsrc="google-news-in";
 const defsort="publishedAt";
-const defpage=1;
-var inn=0;
 
 window.addEventListener('load',async ()=>{
   updateNews();
@@ -39,22 +36,6 @@ btn.onclick=updateSearch;
      const res= await fetch(`http://newsapi.org/v2/everything?q=${srsTerm}&sortBy=${srtby}&pageSize=15&page=${page}&language=en&apiKey=${api}`);
      const json=await res.json();
     main.innerHTML=json.articles.map(createArticles).join('\n');
-  while(json.totalResults>15){
-      inn++;
-      if(load.style.display==="none")
-        {
-          load.style.display="block";
-        }
-      else{
-           load.style.display="none";
-        }
-//  document.querySelector('.searchfor').addEventListener('click',function(){
-//    alert(inn);
-//    updateSearch(page=inn);
-//  });
- 
-    }
-    
 }
 
 });

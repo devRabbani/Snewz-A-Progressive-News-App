@@ -17,7 +17,6 @@ window.addEventListener('load',async ()=>{
   })
   sortselector.addEventListener('change',b=>{
     updateSearch(b.target.value);
-    console.log(b.target.value);
   })
  
 document.querySelector('input').onkeyup=e=>{
@@ -26,14 +25,14 @@ document.querySelector('input').onkeyup=e=>{
 }
 btn.onclick=updateSearch;
   
-  async function updateSearch(srtby=defsort,page=defpage){
+  async function updateSearch(srtby=defsort){
      const srsTerm=document.querySelector('.searchTerm').value;
       selector.style.display="none";  
      headtag.innerHTML=`Search Results for <strong>${srsTerm}</strong>`;
     if(sortselector.style.display==='none'){
       sortselector.style.display="block";
     }
-     const res= await fetch(`http://newsapi.org/v2/everything?q=${srsTerm}&sortBy=${srtby}&pageSize=15&page=${page}&language=en&apiKey=${api}`);
+     const res= await fetch(`https://newsapi.org/v2/everything?q=${srsTerm}&sortBy=${srtby}&pageSize=15&language=en&apiKey=${api}`);
      const json=await res.json();
     main.innerHTML=json.articles.map(createArticles).join('\n');
 }
@@ -41,14 +40,14 @@ btn.onclick=updateSearch;
 });
 
 async function updateSrc(){
-  const res= await fetch(`http://newsapi.org/v2/sources?apiKey=${api}`);
+  const res= await fetch(`https://newsapi.org/v2/sources?apiKey=${api}`);
   const json=await res.json();
   selector.innerHTML=json.sources.map(src=>
     `<option value="${src.id}">${src.name}</option>`
   ).join('\n');  
 }
 async function updateNews(source=defsrc){
-  const res= await fetch(`http://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${api}`);
+  const res= await fetch(`https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${api}`);
   const json=await res.json();
   main.innerHTML=json.articles.map(createArticles).join('\n');
 }
@@ -56,7 +55,7 @@ async function updateNews(source=defsrc){
 function createArticles(article){
       return `
    <div class="article">
-    <a href="${article.url}">
+    <a href="${article.url}" target="_blank">
       <h2>${article.title}</h2>
       <img src="${article.urlToImage}">
       <p>${article.description}</p>

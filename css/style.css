@@ -230,7 +230,7 @@ li {
   display: block;
 }
 .hdrtag{
-  margin-top: 13%;
+  margin-top: 10%;
 }
 /*Media Querries*/
 
@@ -241,6 +241,9 @@ li {
   .awrapper{
   width: 80%;
   }
+  .hdrtag{
+  margin-top: 13%;
+}
 }
 
 @media screen and (max-width:920px){

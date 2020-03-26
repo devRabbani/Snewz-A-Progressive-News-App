@@ -12,24 +12,33 @@
 </head>
 <body>
   <header>
-   <div class="wrapper">
-   <div><h1 style="float: left;">SNEWZ</h1></div>
-   <ul>
-     <li style="padding-right: 25%;"><div class="search">
-      <input type="text" class="searchTerm" placeholder="Search for News!">
-      <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
-     </button>
-   </div></li>
-     <li><a href="index.html">Home</a></li>
-     <li><a rel="external" href="about.html">About</a></li>
-   </ul>  
- </div>
- </header>
+    <nav class="navbar wrapper">
+      <span class="navbar-toggle js-nav">
+        <i class="fa fa-bars"></i>
+      </span>
+      <a href="index.html" class="logo">SNEWZ</a>
+      <ul class="main-nav js-menu">
+        <li>
+          <div class="search">
+            <input type="text" class="searchTerm" placeholder="Search for News!">
+            <button type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </li>
+        <li>
+          <a href="index.html" class="nav-links now">Home</a>
+        </li>
+        <li>
+          <a href="about.html" class="nav-links">About</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
    
    
      <div class="wrapper">
- <h1 class="hdrtag" style="margin-top: 13%;">Top Headlines</h1>
+ <h1 class="hdrtag">Top Headlines</h1>
  <hr>
  <div style="display: none;" class="sort">
    <select class="sortby">
@@ -42,9 +51,9 @@
  <select id="srcselect"></select>
  <div class="main">
  </div>
-
+</div>
  <script src="js/index.js"></script> 
- </div>
+ 
 </body>
 </html>
 

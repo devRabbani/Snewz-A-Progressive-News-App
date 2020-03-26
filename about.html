@@ -12,33 +12,49 @@
 </head>
 <body>
  <header>
- <div class="wrapper">
-   <div><h1 style="float: left;">SNEWZ</h1></div>
-   <ul>
-     <li style="padding-right: 25%;"><div class="search">
-      <input type="text" class="searchTerm" placeholder="Search for News!">
-      <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
-     </button>
-   </div></li>
-     <li><a href="index.html">Home</a></li>
-     <li><a href="about.html">About</a></li>
-   </ul>  
- </div>
- </header>
+    <nav class="navbar wrapper">
+      <span class="navbar-toggle js-nav">
+        <i class="fa fa-bars"></i>
+      </span>
+      <a href="index.html" class="logo">SNEWZ</a>
+      <ul class="main-nav js-menu">
+        <li>
+          <div class="search">
+            <input type="text" class="searchTerm" placeholder="Search for News!">
+            <button type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </li>
+        <li>
+          <a href="index.html" class="nav-links">Home</a>
+        </li>
+        <li>
+          <a href="about.html" class="nav-links">About</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
  <div class="awrapper">
        <h1>About</h1>
      <hr>
      <p>
-       Hello welcome to my simple app which is made by pure vanila JavaScript and it is powered by NewsAPI.This product is not for sale or any other business things,I made this only for practice.I will make many cool project in future.If you want to join our group or see what we do please visit <a href="https://canwebe.github.io/">CanWeBe</a> website.
+       Hello welcome to my simple app which is made by pure vanila JavaScript and it is powered by NewsAPI.This product is not for sale or any other business things,I made this only for practice.I will make many cool project in future.If you want to join our group or see what we do please visit <a href="https://canwebe.github.io/" target="_blank">CanWeBe</a> website.
      </p>
      <h3>My Contacts</h3>
-     <a class="contact" href="https://www.linkedin.com/in/golam-rabbani-74223016b/"><i class="fa fa-linkedin"></i></a>
-     <a class="contact" href="https://www.facebook.com/StrikerOne65"><i class="fa fa-facebook"></i></a>
-     <a class="contact" href="https://twitter.com/Iamrrk__"><i class="fa fa-twitter"></i></a>
-     <a class="contact" href="https://github.com/StrikerOne65"><i class="fa fa-github"></i></a>
+     <a target="_blank" class="contact" href="https://www.linkedin.com/in/golam-rabbani-74223016b/"><i class="fa fa-linkedin"></i></a>
+     <a target="_blank" class="contact" href="https://www.facebook.com/StrikerOne65"><i class="fa fa-facebook"></i></a>
+     <a target="_blank" class="contact" href="https://twitter.com/Iamrrk__"><i class="fa fa-twitter"></i></a>
+     <a target="_blank" class="contact" href="https://github.com/StrikerOne65"><i class="fa fa-github"></i></a>
     </div>
-    
+     <script>
+    let btn=document.querySelector('.js-nav');
+       let menu=document.querySelector('.js-menu')
+       btn.addEventListener('click',()=>{
+         menu.classList.toggle('active');
+       })
+  
+  </script>
 </body>
 </html>
 

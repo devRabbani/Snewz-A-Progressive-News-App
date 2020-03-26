@@ -4,6 +4,8 @@ const btn=document.querySelector('.searchButton');
 const headtag=document.querySelector('.hdrtag');
 const body=document.querySelector('body');
 const sortselector=document.querySelector('.sort');
+let mainNav = document.querySelector('.js-menu');
+let navBarToggle = document.querySelector('.js-nav');
 const api="471a578390434f8cada92ab15e4e8812";
 const defsrc="google-news-in";
 const defsort="publishedAt";
@@ -21,21 +23,37 @@ window.addEventListener('load',async ()=>{
  
 document.querySelector('input').onkeyup=e=>{
   if(e.keyCode===13)
-      updateSearch(); 
+    {
+     updateSearch(); 
+     mainNav.classList.toggle('active');
+    }
+      
 }
-btn.onclick=updateSearch;
-  
+btn.onclick=()=>{
+  updateSearch();
+  mainNav.classList.toggle('active');
+}
   async function updateSearch(srtby=defsort){
      const srsTerm=document.querySelector('.searchTerm').value;
-      selector.style.display="none";  
+      selector.style.display="none"; 
      headtag.innerHTML=`Search Results for <strong>${srsTerm}</strong>`;
     if(sortselector.style.display==='none'){
       sortselector.style.display="block";
     }
-     const res= await fetch(`https://newsapi.org/v2/everything?q=${srsTerm}&sortBy=${srtby}&pageSize=15&language=en&apiKey=${api}`);
+     const res= await fetch(`https://newsapi.org/v2/everything?q=${srsTerm}&sortBy=${srtby}&pageSize=18&language=en&apiKey=${api}`);
      const json=await res.json();
+    if(json.totalResults===0){
+       headtag.innerHTML=`No Search Results found for <strong>${srsTerm}</strong>`;
+    }else{
+       headtag.innerHTML=`Search Results for <strong>${srsTerm}</strong>`;
+    }
     main.innerHTML=json.articles.map(createArticles).join('\n');
 }
+
+
+navBarToggle.addEventListener('click', function () {
+  mainNav.classList.toggle('active');
+});
 
 });
 

@@ -54,9 +54,25 @@ btn.onclick=()=>{
 navBarToggle.addEventListener('click', function () {
   mainNav.classList.toggle('active');
 });
+  
+  registerSw();
 
 });
 
+
+async function registerSw(){
+  if('serviceWorker' in navigator){
+    try{
+      await navigator.serviceWorker.register('./sw.js');
+    }
+    catch(e){
+      console.log("SW registration failed");
+    }
+  }
+}
+
+
+//Functions
 async function updateSrc(){
   const res= await fetch(`https://newsapi.org/v2/sources?apiKey=${api}`);
   const json=await res.json();

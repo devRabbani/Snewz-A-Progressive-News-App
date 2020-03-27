@@ -307,7 +307,7 @@ li {
   .main-nav{
     width: 100%;
     padding-left: 0;
-    background-color: #efefef;
+    background-color: #cad0d1;
     padding-top: 1%;
     padding-bottom:4%;
     margin-bottom: 0; 
@@ -353,7 +353,7 @@ li {
   }
  .article {
   padding: 4%;
-   flex-basis: 85%;
+   flex-basis: 87%;
 }
   .article h2{
     font-size: 95%;
@@ -365,4 +365,41 @@ li {
   .awrapper p {
   line-height: 140%;
 }
+  
+  .main-nav li:last-of-type{
+    margin-bottom: 10%;
+  }
+  .now{
+    background-color: #afb9ba;
+    
+  }
+  
+  .logo{
+    font-size: 3.6rem;
+  }
+  .navbar-toggle{
+  top:5.5px;
+  font-size: 4.5rem;
+}
+
+  .main-nav a{
+    font-size: 450%;
+    display: block;
+    padding: 2%;
+    color:whitesmoke;
+    font-weight: 600;
+ 
+  }
+  .searchTerm{
+   box-shadow: none;
+  }
+  .searchButton{
+    background-color:#00B4CC;
+  }
+  .article p{
+    font-size: 1.8rem;
+  }
+  .article h2{
+    font-size:110%;
+  }
 }

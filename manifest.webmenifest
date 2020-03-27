@@ -1,14 +1,26 @@
 {
   "lang": "en",
   "name": "Simple News",
-  "description": "A simple pwa news app where you can find newses from all souces!",
+  "description": "A simple pwa news app where you can find news from all sources!",
   "short_name": "SNewz",
   "icons": [{
-    "src": "images/Asset.png",
-    "sizes": "512x445"
+    "src": "/images/a512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  },
+  {
+    "src": "/images/a144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  },
+  {
+    "src": "/images/a96.png",
+    "sizes": "96x96",
+    "type": "image/png"
   }
   ],
   "display": "standalone",
   "start_url": ".",
-  "background_color": "#f7f7f7"
+  "background_color": "#cad0d1",
+  "theme_color": "#00B4CC"
 }

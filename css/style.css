@@ -120,7 +120,6 @@ select:hover {
   width: 100%;
   border: 1px solid #dbe2e8;
   color: #2e3d49;
-/*  max-width: 50rem;*/
   outline: none;
   margin: 0 auto;
   height: 2.6rem;
@@ -143,20 +142,18 @@ select:hover {
 }
 
 .search {
-
-  display: flex;
-  width: 150%;
+ display: flex;
+  width: 130%;
 }
 
 .main-nav li:first-of-type{
-  padding-right: 25%;
+  padding-right: 15%;
 }
 
-
-.main-nav a {
+.main-nav a{
   color: #00B4CC;
   text-transform: uppercase;
-  font-size: 300%;
+  font-size: 320%;
   padding: 0 20px;
 }
 
@@ -195,19 +192,10 @@ a.contact {
   font-size: 2rem;
 }
 
-li {
-  padding-right: 3%;
-  margin: auto 0;
-}
-
 .main-nav{
   list-style: none;
   display: none;
-}
-
-.main-nav li{
-  text-align: center;
-  margin: 15px auto;
+  width:100%;
 }
 
 .logo{
@@ -283,9 +271,9 @@ li {
   }
 
   .main-nav li {
-    margin: auto 0;
+    margin: auto 5px;
   }
-
+  
   .logo {
     margin-top: 0;
     margin-bottom: 0;  
@@ -314,8 +302,10 @@ li {
   }
   
   .main-nav li{
-   
-  }
+   padding-right: 3%;
+  text-align: center;
+  margin: 15px auto;
+}
   .main-nav li:last-of-type{
     margin-bottom: 0;
   }

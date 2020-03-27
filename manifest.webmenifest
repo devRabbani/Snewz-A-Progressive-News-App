@@ -1,0 +1,14 @@
+{
+  "lang": "en",
+  "name": "Simple News",
+  "description": "A simple pwa news app where you can find newses from all souces!",
+  "short_name": "SNewz",
+  "icons": [{
+    "src": "images/Asset.png",
+    "sizes": "512x445"
+  }
+  ],
+  "display": "standalone",
+  "start_url": ".",
+  "background_color": "#f7f7f7"
+}

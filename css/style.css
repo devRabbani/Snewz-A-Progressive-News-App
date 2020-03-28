@@ -2,6 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height:100%;
   font-size: 62.5%;
   box-sizing: border-box;
 }
@@ -10,7 +11,7 @@ h1 {
   font-size: 3.2rem;
 }
 
-/* =24px */
+
 h2 {
   font-size: 2.4rem;
 }
@@ -23,13 +24,11 @@ p {
   font-size: 1.6rem;
 }
 
-/* =14px */
+
 a {
   font-size: 1.84rem;
     text-decoration: none;
 }
-
-/* =14px? */
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -41,6 +40,7 @@ body {
 .wrapper {
   width: 80%;
   margin: 0 auto;
+  min-height: 100%;
 }
 
 h1 {
@@ -61,6 +61,7 @@ header {
 .main {
   text-align: center;
   margin-top: 3%;
+  margin-bottom: 10%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -132,8 +133,8 @@ select:hover {
 .searchButton {
   width: 40px;
   height: 4.5rem;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
+  border: 1px solid #0088CC;
+  background:#0088CC;
   text-align: center;
   color: #fff;
   border-radius: 0 5px 5px 0;
@@ -151,15 +152,18 @@ select:hover {
 }
 
 .main-nav a{
-  color: #00B4CC;
+  color: #0088CC;
   text-transform: uppercase;
   font-size: 320%;
+  font-weight: 400;
   padding: 0 20px;
 }
 
 .main-nav a:hover,
-.main-nav a:focus {
-  color: #e67e22;
+.main-nav a:focus,
+.awrapper a:hover,
+.awrapper a:focus{
+  color:#0d587e;
 }
 
 .awrapper {
@@ -180,7 +184,7 @@ select:hover {
 
 .awrapper a {
   font-weight: 400;
-  color: #00B4CC;
+  color: #0088CC;
 }
 
 .awrapper h3 {
@@ -197,21 +201,22 @@ a.contact {
   display: none;
   width:100%;
 }
-
+img{
+  width: 110px;
+}
 .logo{
   display: inline-block;
-  font-size: 3rem;
+  font-size: 100%;
   margin-top: 10px;
   margin-left: 20px;
   margin-bottom: 10px;
 }
 .navbar-toggle{
   position: absolute;
-  top:10px;
   right:20px;
   cursor: pointer;
   font-size: 3rem;
-  color: #00B4CC;
+  color: #0088CC;
 }
 
 .active{
@@ -220,18 +225,51 @@ a.contact {
 .hdrtag{
   margin-top: 10%;
 }
+/*******footer*******/
+
+footer {
+  text-align: center;
+  position: relative;
+  height: 60px;
+  clear: both;
+  background-color: #414141;
+  padding: 10px 0;
+  color: white;
+}
+
+footer p {
+  word-spacing: 2px;
+  line-height: 1px;
+}
+footer a{
+  color: #afafaf;
+}
+.row{
+width: 100%;
+  background-color: #363636;
+  color: #a3a3a3;
+  padding: 10px 0;
+}
+.production {
+  text-align: center;
+  margin: 0;
+  word-spacing: 4px;
+  letter-spacing: 3px;
+  font-size:1.2rem;
+}
+
 /*Media Querries*/
 
 @media screen and (max-width:960px){
   li {
   padding-right: 0;
   }
-  .awrapper{
+ .awrapper{
   width: 80%;
   }
   .hdrtag{
   margin-top: 13%;
-}
+  }
 }
 
 @media screen and (max-width:920px){
@@ -302,16 +340,32 @@ a.contact {
   }
   
   .main-nav li{
-   padding-right: 3%;
   text-align: center;
   margin: 15px auto;
 }
-  .main-nav li:last-of-type{
-    margin-bottom: 0;
-  }
   nav.wrapper{
     width: 100%;
   } 
+  
+  .now{
+    background-color: #afb9ba;  
+  }
+ 
+.navbar-toggle{
+  top:0;
+  font-size: 4.5rem;
+}
+
+  .main-nav a{
+    font-size: 350%;
+    display: block;
+    padding: 2%;
+    color:whitesmoke;
+    font-weight: 600;
+  } 
+  img{
+  width: 100px;
+}
 }
 
 @media screen and (max-width:624px){
@@ -328,13 +382,35 @@ a.contact {
   .main-nav a{
   font-size: 17px;
   }
+  .navbar-toggle{
+  top:2px;
+}
+  .main{
+    margin-bottom: 10%;
+  }
 }
 @media screen and (max-width:501px){
   .hdrtag{
     margin-top: 18%;
   }
+  img{
+    width: 80px;
+  }
+  .log0{
+   margin-left: 30px;
+  }
+.navbar-toggle{
+  top:-2px;
 }
-@media screen and (max-width:411px){
+  footer p,
+  footer a{
+    font-size: 270%;
+  }
+  footer{
+    height: 7%;
+  }
+}
+@media screen and (max-width:481px){
   .hdrtag{
     margin-top: 23%;
   }
@@ -342,8 +418,9 @@ a.contact {
     margin-bottom: 5%;
   }
  .article {
-  padding: 4%;
-   flex-basis: 87%;
+  padding: 6%;
+  flex-basis: 90%;
+   margin-bottom:10%;
 }
   .article h2{
     font-size: 95%;
@@ -352,44 +429,50 @@ a.contact {
   .awrapper{
     margin-top: 40%;
   }
+  
   .awrapper p {
   line-height: 140%;
 }
-  
-  .main-nav li:last-of-type{
-    margin-bottom: 10%;
-  }
-  .now{
-    background-color: #afb9ba;
-    
-  }
-  
-  .logo{
-    font-size: 3.6rem;
-  }
-  .navbar-toggle{
-  top:5.5px;
-  font-size: 4.5rem;
-}
 
+  .now{
+    background-color: #afb9ba;  
+  }
+  
   .main-nav a{
-    font-size: 450%;
-    display: block;
-    padding: 2%;
-    color:whitesmoke;
-    font-weight: 600;
- 
+    font-size: 400%;
   }
   .searchTerm{
    box-shadow: none;
   }
-  .searchButton{
-    background-color:#00B4CC;
-  }
+
   .article p{
     font-size: 1.8rem;
   }
   .article h2{
     font-size:110%;
+  }
+  footer p,
+  footer a{
+    font-size: 240%;
+  }
+  footer{
+    height: 5%;
+  }
+  .production {
+  letter-spacing: 2px;
+  font-size:1.1rem;
+}
+}
+
+@media screen and (max-width:371px){
+  .hdrtag{
+    margin-top: 30%;
+  }
+  footer p,
+  footer a{
+    font-size: 210%;
+  }
+  footer{
+    height: 5%;
   }
 }

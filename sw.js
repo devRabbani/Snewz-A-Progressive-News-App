@@ -5,7 +5,9 @@ const staticAssests=[
 './index.html',
  './about.html',
   './css/style.css',
-  './js/index.js'
+  './js/index.js',
+  './sw.js',
+  './images/icon.svg'
 ];
 
 

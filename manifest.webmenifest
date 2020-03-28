@@ -4,17 +4,17 @@
   "description": "A simple pwa news app where you can find news from all sources!",
   "short_name": "SNewz",
   "icons": [{
-    "src": "/images/a512.png",
+    "src": "/images/b512.png",
     "sizes": "512x512",
     "type": "image/png"
   },
   {
-    "src": "/images/a144.png",
-    "sizes": "144x144",
+    "src": "/images/b192.png",
+    "sizes": "192x192",
     "type": "image/png"
   },
   {
-    "src": "/images/a96.png",
+    "src": "/images/b96.png",
     "sizes": "96x96",
     "type": "image/png"
   }

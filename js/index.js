@@ -9,6 +9,7 @@ let navBarToggle = document.querySelector('.js-nav');
 const api="471a578390434f8cada92ab15e4e8812";
 const defsrc="google-news-in";
 const defsort="publishedAt";
+var deferredPrompt;
 
 window.addEventListener('load',async ()=>{
   updateNews();
@@ -55,11 +56,21 @@ navBarToggle.addEventListener('click', function () {
   mainNav.classList.toggle('active');
 });
   
-  registerSw();
+window.addEventListener('beforeinstallprompt', function (e) { // Prevent Chrome 67 and earlier from automatically showing the prompt 
+    e.preventDefault();
+    // Stash the event so it can be triggered later. 
+    deferredPrompt = e;
+    showAddToHomeScreen();
+  });
+  
+  
+registerSw();
 
 });
 
 
+
+//Functions
 async function registerSw(){
   if('serviceWorker' in navigator){
     try{
@@ -72,7 +83,6 @@ async function registerSw(){
 }
 
 
-//Functions
 async function updateSrc(){
   const res= await fetch(`https://newsapi.org/v2/sources?apiKey=${api}`);
   const json=await res.json();
@@ -95,6 +105,34 @@ function createArticles(article){
       <p>${article.description}</p>
     </a>
    </div>
-`;
-  
+`; 
+}
+
+function showAddToHomeScreen() {
+  var a2hs = document.querySelector(".promo");
+  var a2hsbtn=document.querySelector(".bt");
+  a2hs.style.display = "block";
+  a2hsbtn.addEventListener("click", addToHomeScreen);
+}
+
+
+function addToHomeScreen() {
+  var a2hs = document.querySelector(".promo");
+
+  // hide our user interface that shows our A2HS button 
+  a2hs.style.display = 'none';
+
+  // Show the prompt 
+  deferredPrompt.prompt();
+
+  // Wait for the user to respond to the prompt 
+  deferredPrompt.userChoice
+    .then(function (choiceResult) {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt');
+      } else {
+        console.log('User dismissed the A2HS prompt');
+      }
+      deferredPrompt = null;
+    });
 }

@@ -225,6 +225,48 @@ img{
 .hdrtag{
   margin-top: 10%;
 }
+
+
+
+.promo{
+  display: none;
+  background-color:#7F38FB; 
+  padding:0 2%;
+  border-radius: 15px;
+  width: 55%;
+  margin: 0 auto;
+   margin-top: 3%;
+  text-align: center;
+  box-shadow: 0px 5px 7px -2px #808080a1;
+}
+
+.promo p{
+  font-size: 2.4rem;
+  color: #FDFAFF;
+  display: inline-block;
+  font-weight: 400;
+  margin-right: 3%;
+}
+.bt{
+  padding:8px;
+  width: 140px;
+  background-color: white;
+  text-align: center;
+  border-radius:25px;
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #0088CC;
+  margin-bottom: 2%;
+  transition: all 0.6s;
+  border: 1px solid white;
+}
+.bt:hover,
+.bt:focus{
+  background-color:#7F38FB;
+  color: white;
+  border: 1px solid white;
+}
+
 /*******footer*******/
 
 footer {
@@ -270,6 +312,9 @@ width: 100%;
   .hdrtag{
   margin-top: 13%;
   }
+  .promo{
+    width: 95%;
+  }
 }
 
 @media screen and (max-width:920px){
@@ -291,6 +336,17 @@ width: 100%;
   padding: 4%;
    flex-basis: 70%;
 }
+  .promo p{
+font-size: 2rem;
+    margin-bottom: 3%;
+  }
+  .bt{
+    font-size:1.8rem ;
+  }
+  .promo{
+    width: 85%;
+    margin-bottom: 5%;
+  }
 }
 
 @media screen and (min-width:685px) {
@@ -388,6 +444,9 @@ width: 100%;
   .main{
     margin-bottom: 10%;
   }
+  .bt{
+    margin-bottom: 4%;
+  }
 }
 @media screen and (max-width:501px){
   .hdrtag{
@@ -462,6 +521,19 @@ width: 100%;
   letter-spacing: 2px;
   font-size:1.1rem;
 }
+  .promo{
+    width: 90%;
+  }
+  .bt{
+    width: 90px;
+    padding: 5px;
+  }
+   .promo p{
+    font-size: 1.8rem;
+  }
+  .bt{
+    font-size:1.6rem ;
+  }
 }
 
 @media screen and (max-width:371px){

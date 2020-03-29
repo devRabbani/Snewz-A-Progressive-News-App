@@ -101,7 +101,7 @@ function createArticles(article){
    <div class="article">
     <a href="${article.url}" target="_blank">
       <h2>${article.title}</h2>
-      <img src="${article.urlToImage}">
+      <img alt="${article.title}" src="${article.urlToImage}">
       <p>${article.description}</p>
     </a>
    </div>

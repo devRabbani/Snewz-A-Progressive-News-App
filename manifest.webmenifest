@@ -1,7 +1,7 @@
 {
   "lang": "en",
-  "name": "Simple News",
-  "description": "A simple pwa news app where you can find news from all sources!",
+  "name": "Simple NewZ App",
+  "description": "A simple pwa news app where you can find  and search news from all sources!",
   "short_name": "SNewz",
   "icons": [{
     "src": "/images/b512.png",
@@ -21,6 +21,7 @@
   ],
   "display": "standalone",
   "start_url": ".",
-  "background_color": "#cad0d1",
-  "theme_color": "#00B4CC"
+  "background_color": "#b7c0c1",
+  "theme_color": "#0088CC",
+  "categories": ["news", "magazines", "politics","sports"]
 }

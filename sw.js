@@ -7,7 +7,9 @@ const staticAssests=[
   './css/style.css',
   './js/index.js',
   './sw.js',
-  './images/icon.svg'
+  './images/icon.svg',
+  './images/favicon-32x32.png',
+  './images/favicon-16x16.png'
 ];
 
 

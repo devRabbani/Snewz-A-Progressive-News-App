@@ -17,11 +17,31 @@
     "src": "/images/b96.png",
     "sizes": "96x96",
     "type": "image/png"
-  }
+  },
+  {
+			"src": "/images/b300.png",
+			"sizes": "300x300",
+      "type": "image/png"
+		},
+		{
+			"src": "/images/b144.png",
+			"sizes": "144x144",
+      "type": "image/png"
+		},
+		{
+			"src": "/images/b180.png",
+			"sizes": "180x180",
+      "type": "image/png"
+		},
+		{
+			"src": "/images/b152.png",
+			"sizes": "152x152",
+      "type": "image/png"
+		}
   ],
   "display": "standalone",
   "start_url": ".",
   "background_color": "#b7c0c1",
-  "theme_color": "#0088CC",
+  "theme_color": "#09297d",
   "categories": ["news", "magazines", "politics","sports"]
 }

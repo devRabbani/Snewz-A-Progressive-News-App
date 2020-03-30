@@ -12,12 +12,12 @@ const defsort="publishedAt";
 var deferredPrompt;
 
 
-document.addEventListener('touchstart', (evt) => {
- // ... do stuff with evt
-}, {
- capture: true,
- passive: true
-});
+// document.addEventListener('touchstart', (evt) => {
+//  // ... do stuff with evt
+// }, {
+//  capture: true,
+//  passive: true
+// });
 
 
 window.addEventListener('load',async ()=>{

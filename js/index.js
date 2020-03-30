@@ -11,12 +11,6 @@ const defsrc="google-news-in";
 const defsort="publishedAt";
 var deferredPrompt;
 
-document.addEventListener('wheel', (evt) => {
-  // ... do stuff with evt
-}, {
-  capture: true,
-  passive: true
-});
 
 document.addEventListener('touchstart', (evt) => {
  // ... do stuff with evt

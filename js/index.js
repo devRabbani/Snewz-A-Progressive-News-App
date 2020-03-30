@@ -11,6 +11,11 @@ const defsrc="google-news-in";
 const defsort="publishedAt";
 var deferredPrompt;
 
+
+document.addEventListener('touchstart', ()=>{
+  //Hell0
+}, {passive: true});
+
 window.addEventListener('load',async ()=>{
   updateNews();
   await updateSrc();
@@ -63,7 +68,6 @@ window.addEventListener('beforeinstallprompt', function (e) { // Prevent Chrome 
     showAddToHomeScreen();
   });
   
-  
 registerSw();
 
 });
@@ -99,7 +103,7 @@ async function updateNews(source=defsrc){
 function createArticles(article){
       return `
    <div class="article">
-    <a href="${article.url}" target="_blank">
+    <a href="${article.url}" rel="noreferrer" target="_blank">
       <h2>${article.title}</h2>
       <img alt="${article.title}" src="${article.urlToImage}">
       <p>${article.description}</p>

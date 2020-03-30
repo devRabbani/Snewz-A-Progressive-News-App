@@ -39,7 +39,7 @@ body {
   font-weight: 300;
   position: relative;
   background-color:#f7f7f7;
-  font-display: fallback;
+  font-display:fallback;
 }
 
 .wrapper {

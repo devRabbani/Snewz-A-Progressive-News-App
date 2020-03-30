@@ -14,7 +14,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
- <link rel="canonical" href="https://nwz.netlify.com">
+ <link rel="canonical" href="https://nwz.netlify.com/index.html">
   <link rel="stylesheet" href="css/style.css">
  <link rel="manifest" href="manifest.webmenifest">
 </head> 
@@ -28,9 +28,9 @@
       <ul class="main-nav js-menu">
         <li>
           <div class="search">
-           <label><input type="text" class="searchTerm" placeholder="Search for News!"></label>
+           <input type="text" aria-label="searchNews" class="searchTerm" placeholder="Search for News!">
             
-            <button name="searchButton" type="submit" class="searchButton">
+            <button aria-label="searchButton" type="submit" class="searchButton">
               <i class="fa fa-search"></i>
             </button>
           </div>
@@ -50,19 +50,16 @@
  <h1 class="hdrtag">Top Headlines</h1>
  <hr>
  <div style="display: none;" class="sort">
-  <label>
-    <select class="sortby">
+
+    <select aria-label="sortBy" class="sortby">
       <option value="publishedAt">PublishedAt</option>
       <option value="relevancy">Relevancy</option>
       <option value="popularity">Popularity</option>
       
     </select>
-  </label>
-   
  </div>
- <label>
-   <select id="srcselect"></select>
- </label>
+
+   <select aria-label="sourceSelect" id="srcselect"></select>
  
  <div class="promo">
    <p>Access News fast and offline with our app.</p>

@@ -11,10 +11,20 @@ const defsrc="google-news-in";
 const defsort="publishedAt";
 var deferredPrompt;
 
+document.addEventListener('wheel', (evt) => {
+  // ... do stuff with evt
+}, {
+  capture: true,
+  passive: true
+});
 
-document.addEventListener('touchstart', ()=>{
-  //Hell0
-}, {passive: true});
+document.addEventListener('touchstart', (evt) => {
+ // ... do stuff with evt
+}, {
+ capture: true,
+ passive: true
+});
+
 
 window.addEventListener('load',async ()=>{
   updateNews();
@@ -68,6 +78,9 @@ window.addEventListener('beforeinstallprompt', function (e) { // Prevent Chrome 
     showAddToHomeScreen();
   });
   
+   
+   
+
 registerSw();
 
 });

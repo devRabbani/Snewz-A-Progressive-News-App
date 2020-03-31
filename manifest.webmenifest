@@ -12,7 +12,7 @@
     "src": "/images/maskable.png",
     "sizes": "196x196",
     "type": "image/png",
-    "purpose": "any maskable"
+    "purpose": "maskable"
   },
   {
     "src": "/images/b192.png",
@@ -43,6 +43,6 @@
   "display": "standalone",
   "start_url": ".",
   "background_color": "#b7c0c1",
-  "theme_color": "#09297d",
+  "theme_color": "#0088CC",
   "categories": ["news", "magazines", "politics","sports"]
 }

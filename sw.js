@@ -3,7 +3,7 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox
 workbox.precaching.precacheAndRoute([
   {
     "url": "about.html",
-    "revision": "d1f9ca9b04074f5f2f854cfe3685ab53"
+    "revision": "acd572a390cc00ee01c7118a4be87c9f"
   },
   {
     "url": "css/style.css",
@@ -15,7 +15,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "90e0374a40df591d27f577b227a1e73f"
+    "revision": "65e08151e82f16d1b6980894b50f7c95"
   },
   {
     "url": "js/index.js",

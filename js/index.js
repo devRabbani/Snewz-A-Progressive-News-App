@@ -12,13 +12,6 @@ const defsort="publishedAt";
 var deferredPrompt;
 
 
-// document.addEventListener('touchstart', (evt) => {
-//  // ... do stuff with evt
-// }, {
-//  capture: true,
-//  passive: true
-// });
-
 
 window.addEventListener('load',async ()=>{
   updateNews();
@@ -65,35 +58,20 @@ navBarToggle.addEventListener('click', function () {
   mainNav.classList.toggle('active');
 });
   
+  
+  
 window.addEventListener('beforeinstallprompt', function (e) { // Prevent Chrome 67 and earlier from automatically showing the prompt 
     e.preventDefault();
     // Stash the event so it can be triggered later. 
     deferredPrompt = e;
     showAddToHomeScreen();
   });
-  
-   
-   
-
-registerSw();
 
 });
 
 
 
 //Functions
-async function registerSw(){
-  if('serviceWorker' in navigator){
-    try{
-      await navigator.serviceWorker.register('./sw.js');
-    }
-    catch(e){
-      console.log("SW registration failed");
-    }
-  }
-}
-
-
 async function updateSrc(){
   const res= await fetch(`https://newsapi.org/v2/sources?apiKey=${api}`);
   const json=await res.json();

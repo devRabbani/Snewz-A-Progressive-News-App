@@ -9,6 +9,12 @@
     "type": "image/png"
   },
   {
+    "src": "/images/maskable.png",
+    "sizes": "196x196",
+    "type": "image/png",
+    "purpose": "any maskable"
+  },
+  {
     "src": "/images/b192.png",
     "sizes": "192x192",
     "type": "image/png"
@@ -21,11 +27,6 @@
   {
 			"src": "/images/b300.png",
 			"sizes": "300x300",
-      "type": "image/png"
-		},
-		{
-			"src": "/images/b144.png",
-			"sizes": "144x144",
       "type": "image/png"
 		},
 		{

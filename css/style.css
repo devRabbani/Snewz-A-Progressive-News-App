@@ -6,8 +6,10 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: 100%;
-  
+  scroll-behavior: smooth; 
 }
+
+
 .bheight{
   height: auto;
 }
@@ -46,6 +48,7 @@ body {
   width: 80%;
   margin: 0 auto;
   min-height: 100%;
+  max-width: 1680px;
 }
 
 h1 {
@@ -153,7 +156,8 @@ select:hover {
   color: #2e3d49;
   outline: none;
   margin: 0 auto;
-  height: 2.6rem;
+  /* height: 2.6rem; */
+  height: 4.5rem;
   font-size: 16px;
   border-radius: 8px 0 0 8px;
   display: block;
@@ -203,8 +207,9 @@ select:hover {
 .awrapper {
   width: 50%;
   margin: 0 auto;
-  margin-top: 15%;
+  margin-top: 212px;
   text-align: center;
+  max-width: 1680px;
 }
 
 .awrapper p {
@@ -305,6 +310,10 @@ img{
   transform: scale(0.9);
 }
 
+.loader{
+  position: absolute;
+  top:40%;
+}
 /*******footer*******/
 
 footer {
@@ -338,31 +347,41 @@ width: 100%;
   font-size:1.2rem;
 }
 
-.ctr{
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-.padded {
-  padding: 0 10%;
-}
-
-.back-link {
-  padding-bottom: 10%;
-}
-
-
 
 
 
 /*Media Querries*/
+@media screen and (max-width:1460px){
+  .wrapper{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:1350px){
+  .wrapper{
+    width: 95%;
+  }
+}
+
+@media screen and (max-width:1260px){
+  .article{
+    flex-basis: 37rem;
+  }
+  .wrapper{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:1110px){
+  .article{
+    flex-basis: 32rem;
+  }
+  .hdrtag{
+    margin-top: 13%;
+    }
+}
+
+
 
 @media screen and (max-width:960px){
   li {
@@ -371,26 +390,26 @@ width: 100%;
  .awrapper{
   width: 80%;
   }
-  .hdrtag{
-  margin-top: 13%;
+  .wrapper{
+    width: 90%;
   }
   .promo{
     width: 95%;
   }
 }
 
-@media screen and (max-width:920px){
-  .wrapper{
-    width: 90%;
-  }
+
+@media screen and (max-width:840px){
+ 
+  .article{
+    flex-basis: 30rem;
+  } 
 }
+
 
 @media screen and (max-width:789px){
   html,body{
     font-size: 60%;
-  }
-  .awrapper{
-    margin-top: 25%;
   }
 }
 @media screen and (max-width:760px){
@@ -459,10 +478,7 @@ font-size: 2rem;
   .search{
     width: 100%;
   }
-  .searchButton {
-    height: 4.62rem;
-  }
-  
+
   .main-nav{
     width: 100%;
     padding-left: 0;
@@ -518,8 +534,7 @@ font-size: 2rem;
     font-size: 55%;
   }
   .searchButton{
-    height:42px;
-    width: 58px;
+    width: 46px;
   }
   .main-nav a{
   font-size: 17px;
@@ -621,6 +636,10 @@ font-size: 2rem;
   .searchTerm{
    -webkit-box-shadow: none;
    box-shadow: none;
+   height: 5.7rem;
+  }
+  .searchButton{
+    height: 5.6rem;
   }
 
   .article p{

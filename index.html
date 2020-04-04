@@ -2,19 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="A simple free Top News web app">
-  <meta name="keywords" content="SNewz,SNEWZ,snewz,snews,HTML,CSS,Web News,Top,News">
+  <meta name="description" content="Simple Newz,A simple free progressive News app for the latest news, Top headlines from many sources. You can select sources from all over the world .This can also be used in offline mode, apart from this we can also install it in our system. It is a very lightweight app as compare to other apps.">
+  <meta name="keywords" content="SNewz,SNEWZ,snewz,snews,Simple Newz App,HTML,CSS,Web News,Top,News,netlify">
   <meta name="author" content="Golam Rabbani">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
   <meta name="theme-color" content="#0088CC">
   <meta name="copyright" content="CanWeBe">
   <meta name="reply-to" content="teamcanwebe@gmail.com">
-  <title>SNewz</title>
+  <!-- og for share -->
+  <meta property="og:title" content="SNewz - A Simple Progressive News App for the top headlines,latest news etc."/>
+ <meta property="og:description" content="Simple Newz,A simple free progressive News app for the latest news, Top headlines from many sources. You can select sources from all over the world .This can also be used in offline mode, apart from this we can also install it in our system. It is a very lightweight app as compare to other apps."/>
+ <meta property="og:type" content="website"/>
+ <meta property="og:image" content="https://snewz.netlify.com/images/b512.png"/>
+ <meta name="og:site_name" content="SNewz">
+ <meta name="og:url" content="https://snewz.netlify.com/">
+  <title>SNewz - A Simple Progressive News App for the top headlines,latest news etc.</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
- <link rel="canonical" href="/index.html">
+ <link rel="canonical" href="https://snewz.netlify.app/">
+ <meta name="google-site-verification" content="dJTBnmCY5cQpg8sIkRpz_Ey-42GBncPcS7Sr079nYnE" />
  <link rel="manifest" href="manifest.webmenifest">
   <link rel="stylesheet" href="css/style.css">
 </head> 
@@ -28,7 +36,7 @@
       <ul class="main-nav js-menu">
         <li>
           <div class="search">
-           <input type="text" aria-label="searchNews" class="searchTerm" placeholder="Search for News!">
+           <input type="search" autocomplete required aria-label="searchNews" class="searchTerm" placeholder="Search for News!">
             
             <button aria-label="searchButton" type="submit" class="searchButton">
               <i class="fa fa-search"></i>
@@ -66,10 +74,11 @@
    <button name="install" class="bt">Install</button>
  </div>
  <div class="main">
+   <div class="loader"><img src="images/Dual Ring.svg" alt="loading"></div>
  </div>
 </div>
       <footer>
-            <p>Copyright &copy; 2019 by CanWeBe! Inc. All rights are reserved</p> &nbsp; <a href="https://www.privacypolicytemplate.net/live.php?token=kjGD3UQtV4sFhvQ8iizS66EYcfdKaaMS">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.termsfeed.com/terms-service/22332157cae9c1ab0d968ac4b3ab5d62">Terms of Use</a>
+            <p>Copyright &copy; 2020 by CanWeBe! Inc. All rights are reserved</p> &nbsp; <a href="https://www.privacypolicytemplate.net/live.php?token=kjGD3UQtV4sFhvQ8iizS66EYcfdKaaMS">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.termsfeed.com/terms-service/22332157cae9c1ab0d968ac4b3ab5d62">Terms of Use</a>
       </footer>
       <div class="row">
           <p class="production"><strong>&#9679; A GOLAM RABBANI PRODUCTION &#9679;</strong></p>
@@ -86,8 +95,8 @@
                 });
             });
           }
-        </script>
- <script src="js/index.js"></script> 
+    </script>
+   <script src="js/index.js"></script> 
  
 </body>
 </html>

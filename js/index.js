@@ -4,16 +4,20 @@ const btn=document.querySelector('.searchButton');
 const headtag=document.querySelector('.hdrtag');
 const body=document.querySelector('body');
 const sortselector=document.querySelector('.sort');
+const loader=document.querySelector('.loader');
 let mainNav = document.querySelector('.js-menu');
 let navBarToggle = document.querySelector('.js-nav');
 const api="471a578390434f8cada92ab15e4e8812";
 const defsrc="google-news-in";
 const defsort="publishedAt";
-var deferredPrompt;
+const a2hs = document.querySelector(".promo");
+const a2hsbtn=document.querySelector(".bt");
+let deferredPrompt;
 
 
 
 window.addEventListener('load',async ()=>{
+  
   updateNews();
   await updateSrc();
   selector.value=defsrc;
@@ -24,19 +28,26 @@ window.addEventListener('load',async ()=>{
     updateSearch(b.target.value);
   })
  
-document.querySelector('input').onkeyup=e=>{
+document.querySelector('input').onkeyup=async e=>{
   if(e.keyCode===13)
     {
-     updateSearch(); 
+     main.style.filter ='blur(8px)';
      mainNav.classList.toggle('active');
+     await updateSearch(); 
+     main.style.filter ='none';
+     
     }
       
 }
-btn.onclick=()=>{
-  updateSearch();
+btn.onclick=async ()=>{
+  main.style.filter ='blur(8px)';
   mainNav.classList.toggle('active');
+  await updateSearch();
+  main.style.filter ='none';
+  
 }
   async function updateSearch(srtby=defsort){
+    topFunction();
      const srsTerm=document.querySelector('.searchTerm').value;
       selector.style.display="none"; 
      headtag.innerHTML=`Search Results for <strong>${srsTerm}</strong>`;
@@ -60,9 +71,8 @@ navBarToggle.addEventListener('click', function () {
   
   
   
-window.addEventListener('beforeinstallprompt', function (e) { // Prevent Chrome 67 and earlier from automatically showing the prompt 
+window.addEventListener('beforeinstallprompt', function (e) {
     e.preventDefault();
-    // Stash the event so it can be triggered later. 
     deferredPrompt = e;
     showAddToHomeScreen();
   });
@@ -72,6 +82,11 @@ window.addEventListener('beforeinstallprompt', function (e) { // Prevent Chrome 
 
 
 //Functions
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 async function updateSrc(){
   const res= await fetch(`https://newsapi.org/v2/sources?apiKey=${api}`);
   const json=await res.json();
@@ -90,31 +105,24 @@ function createArticles(article){
    <div class="article">
     <a href="${article.url}" rel="noreferrer" target="_blank">
       <h2>${article.title}</h2>
-      <img alt="${article.title}" src="${article.urlToImage}">
+      <img loading="lazy" alt="${article.title}" src="${article.urlToImage}">
       <p>${article.description}</p>
     </a>
    </div>
 `; 
 }
 
-function showAddToHomeScreen() {
-  var a2hs = document.querySelector(".promo");
-  var a2hsbtn=document.querySelector(".bt");
+function showAddToHomeScreen() { 
   a2hs.style.display = "block";
+  loader.style.top = "50%";
   a2hsbtn.addEventListener("click", addToHomeScreen);
 }
 
 
 function addToHomeScreen() {
-  var a2hs = document.querySelector(".promo");
-
-  // hide our user interface that shows our A2HS button 
   a2hs.style.display = 'none';
-
-  // Show the prompt 
+  loader.style.top = "40%";
   deferredPrompt.prompt();
-
-  // Wait for the user to respond to the prompt 
   deferredPrompt.userChoice
     .then(function (choiceResult) {
       if (choiceResult.outcome === 'accepted') {
